@@ -15,6 +15,11 @@
     <script type="module" src="/projectCard.js"></script>
 
     <style>
+      button { 
+        display: inline-block;
+        margin: 0.25rem;
+      }
+
       #flex-cont {
         display: flex;
         justify-content: flex-start;
@@ -85,47 +90,11 @@
       require the grader to install anything or run any build scripts.
     -->
 
+    <button id="clearBtn">Clear Page</button>
     <button id="localBtn">Load Local</button>
     <button id="remoteBtn">Load Remote</button>
 
-    <div id="flex-cont">
-
-      <project-card
-        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
-        img-alt="dope image!"
-        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
-        <span slot="p-name">New Name</span>
-        <span slot="p-desc">New Desc</span>
-      </project-card>
-    
-      <project-card
-        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
-        img-alt="dope image!"
-        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
-        <span slot="p-name">New Name</span>
-        <span slot="p-desc">New Desc</span>
-      </project-card>
-    
-      <project-card
-        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
-        img-alt="dope image!"
-        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
-        <span slot="p-name">New Name</span>
-        <span slot="p-desc">New Desc</span>
-      </project-card>
-    
-    
-      <project-card
-        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
-        img-alt="dope image!"
-        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
-        <span slot="p-name">New Name</span>
-        <span slot="p-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab tempore laboriosam mollitia, voluptatem veniam a consequuntur quaerat minus enim illum quos autem id, laudantium ducimus dolorem esse expedita voluptates?
-        </span>
-      </project-card>
-    
-    </div>
+    <div id="flex-cont"></div>
 
     <template id="project-card-template">
       <style>
@@ -139,7 +108,7 @@
           text-align: center;
         }
         p {
-          max-width: 200px;
+          max-width: 400px;
         }
         a {
           display: block;
@@ -157,7 +126,7 @@
       </style>
       <div class="wrapper">
         <h3><slot name="p-name">Default Project Name</slot></h3>
-        <img src="" alt="" width="200px">
+        <img src="" alt="" width="400px">
         <p><slot name="p-desc">Default Description</slot></p>
         <a href="">Read More!</a>
       </div>

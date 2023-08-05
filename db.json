@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Nyquist Stability Project",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatum nobis temporibus deleniti quisquam iusto animi. Voluptatum blanditiis ea molestiae? Fugit ratione earum incidunt nihil debitis magni dolorum nulla amet.",
+            "desc": "In control theory and stability theory, the Nyquist stability criterion or Strecker–Nyquist stability criterion, independently discovered by the German electrical engineer Felix Strecker [de] at Siemens in 1930[1][2][3] and the Swedish-American electrical engineer Harry Nyquist at Bell Telephone Laboratories in 1932,[4] is a graphical technique for determining the stability of a dynamical system.",
             "readMore": "https://en.wikipedia.org/wiki/Nyquist_stability_criterion",
             "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nyquist_example.svg/450px-Nyquist_example.svg.png",
             "imgAlt": "Nyquist Plot for second order system"

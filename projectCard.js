@@ -2,11 +2,14 @@ class ProjectCard extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.innerHTML = "Loading..."
   }
 
   static get observedAttributes() {
     return ["name", "desc", "img-src", "img-alt", "read-more"];
+  }
+
+  connectedCallback() {
+    this.rrerender();
   }
 
   attributeChangedCallback(name, oldval, newval) {
