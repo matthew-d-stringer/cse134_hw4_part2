@@ -63,23 +63,23 @@ function loadRemote() {
 
             container.appendChild(proj);
         }
+    }).catch(error => {
+        container.innerHTML = `Error (try again): ${error.message}`;
+        console.error(error);
     });
 }
 
 async function returnData() {
-    try {
-        const res = await fetch(
-            "https://my-json-server.typicode.com/matthew-d-stringer/cse134_hw4_part2/projects",
-            {
-                method: "GET",
-                redirect: "error"
-            }
-        );
-        if(res.status != 200) throw new Error("Request status not 200!");
-        return res.json();
-    }catch(error) {
-        console.error(`Error: ${error.message}`);
-    }
+    const res = await fetch(
+        "https://my-json-server.typicode.com/matthew-d-stringer/cse134_hw4_part2/projects",
+        {
+        method: "GET",
+        redirect: "error",
+        signal: AbortSignal.timeout(5000),
+        }
+    );
+    if (res.status != 200) throw new Error("Request status not 200!");
+    return res.json();
 }
 
 window.addEventListener("DOMContentLoaded", init);
