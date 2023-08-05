@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "name": "Nyquist Stability Project",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatum nobis temporibus deleniti quisquam iusto animi. Voluptatum blanditiis ea molestiae? Fugit ratione earum incidunt nihil debitis magni dolorum nulla amet.",
+            "readMore": "https://en.wikipedia.org/wiki/Nyquist_stability_criterion",
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nyquist_example.svg/450px-Nyquist_example.svg.png",
+            "imgAlt": "Nyquist Plot for second order system"
+        },
+        {
+            "name": "Control Theory",
+            "desc": "Control theory is a field of control engineering and applied mathematics that deals with the control of dynamical systems in engineered processes and machines. The objective is to develop a model or algorithm governing the application of system inputs to drive the system to a desired state, while minimizing any delay, overshoot, or steady-state error and ensuring a level of control stability; often with the aim to achieve a degree of optimality.",
+            "readMore": "https://en.wikipedia.org/wiki/Control_theory",
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ideal_feedback_model.svg/330px-Ideal_feedback_model.svg.png",
+            "imgAlt": "A basic feedback loop block diagram"
+        },
+        {
+            "name": "Lyapunov Stability",
+            "desc": "Various types of stability may be discussed for the solutions of differential equations or difference equations describing dynamical systems. The most important type is that concerning the stability of solutions near to a point of equilibrium. This may be discussed by the theory of Aleksandr Lyapunov. In simple terms, if the solutions that start out near an equilibrium point x e x_{e} stay near x e x_{e} forever, then x e x_{e} is Lyapunov stable.",
+            "readMore": "https://en.wikipedia.org/wiki/Lyapunov_stability",
+            "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Angular_Parameters_of_Elliptical_Orbit.png/270px-Angular_Parameters_of_Elliptical_Orbit.png",
+            "imgAlt": "Lyapunov methods used for Orbital Mechanics"
+        }
+    ]
+}
