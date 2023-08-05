@@ -11,8 +11,22 @@
       for the customElement vs the page layout and CRUD actions if you do them. Regardless of 
       what you do you use ES modules and vanilla JS.
     -->
-</head>
+    <script src="gallary.js"></script>
+    <script type="module" src="/projectCard.js"></script>
 
+    <style>
+      #flex-cont {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+
+      #flex-cont project-card {
+        margin: 0.5rem 0.5rem;
+      }
+    </style>
+</head>
 <body>
   <!--
       This page will contain a list of cards which will contain cards that overview each project in 
@@ -70,6 +84,84 @@
       use a local file, CDN or other simple method to load the framework or library. You should not 
       require the grader to install anything or run any build scripts.
     -->
+
+    <button id="localBtn">Load Local</button>
+    <button id="remoteBtn">Load Remote</button>
+
+    <div id="flex-cont">
+
+      <project-card
+        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
+        img-alt="dope image!"
+        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
+        <span slot="p-name">New Name</span>
+        <span slot="p-desc">New Desc</span>
+      </project-card>
+    
+      <project-card
+        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
+        img-alt="dope image!"
+        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
+        <span slot="p-name">New Name</span>
+        <span slot="p-desc">New Desc</span>
+      </project-card>
+    
+      <project-card
+        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
+        img-alt="dope image!"
+        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
+        <span slot="p-name">New Name</span>
+        <span slot="p-desc">New Desc</span>
+      </project-card>
+    
+    
+      <project-card
+        img-src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-wide.png"
+        img-alt="dope image!"
+        read-more="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthedopeart.com%2F&psig=AOvVaw2lzA0Eu3PhATKEaRfBatfh&ust=1691313288820000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMD12pGXxYADFQAAAAAdAAAAABAD">
+        <span slot="p-name">New Name</span>
+        <span slot="p-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab tempore laboriosam mollitia, voluptatem veniam a consequuntur quaerat minus enim illum quos autem id, laudantium ducimus dolorem esse expedita voluptates?
+        </span>
+      </project-card>
+    
+    </div>
+
+    <template id="project-card-template">
+      <style>
+        .wrapper {
+          width: fit-content;
+          border: 0.3rem black solid;
+          border-radius: 1rem;
+          padding: 0.4rem;
+        }
+        h3 {
+          text-align: center;
+        }
+        p {
+          max-width: 200px;
+        }
+        a {
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: black;
+          background-color: lightblue;
+          padding: 0.4rem;
+          border-radius: 1rem;
+        }
+        a:hover {
+          background-color: darkblue;
+          color: white;
+        }
+      </style>
+      <div class="wrapper">
+        <h3><slot name="p-name">Default Project Name</slot></h3>
+        <img src="" alt="" width="200px">
+        <p><slot name="p-desc">Default Description</slot></p>
+        <a href="">Read More!</a>
+      </div>
+    </template>
 </body>
 
 </html>
