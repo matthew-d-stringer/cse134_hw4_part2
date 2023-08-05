@@ -22,6 +22,8 @@ function loadLocal() {
     let data;
     try {
         data = JSON.parse(localStorage.getItem("projects"));
+
+        if(!data) throw new Error("Empty localstorage");
     }catch(error) {
         container.innerHTML = "Local Storage is empty!";
         return;
